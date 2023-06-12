@@ -1,0 +1,26 @@
+h2 + p{                     /* this is Adjacent sibling combinator It matches only those elements matched 
+                              by the second selector that are the next sibling element of the first selector. to select 
+                          all <p> elements that are immediately preceded by a <h2> element: ex:- first para , new para
+                           if we comment monospace then bold visible in new para */
+    font-weight:  bold;       
+}
+
+
+
+h2 ~ p{                     /*this is general sibling combinator (~) separates two selectors and matches all iterations 
+                           of the second element, that are following the first element. means all p which is just after h2 become red */
+     color :  rgb(157, 28, 161);
+}
+
+
+section > p {                   /*Child combinator :- this affect which is inside the section*/
+ 
+     background-color:  aqua;
+
+}
+
+ section p{                    /*Descendant combinator*/
+      
+     font-family:  monospace; 
+ }
+     

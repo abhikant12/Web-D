@@ -1,0 +1,37 @@
+div{
+    height : 80px;
+    width : 80px;
+    color: cyan;
+    background-color: blue;
+   
+    margin: 20px;
+}
+
+  /*
+  scale transform means element draw on it place and whole element get bigger in specific direction;
+  if we compare one and two  with three then one get bigger in 1.5 in x dir and 1.5 in y dirc
+   and two get bigger in only right direction;  to use scaleZ();  we have to use  perspective()  like  transform:  perspective(4) scaleZ(3);
+  */
+ 
+
+.one{
+     transform: perspective() scale(1.5,1.5);          /* 1.5 in x dir and 1.5 in y dirc */
+    
+}
+
+.two{
+    height:  200px;
+    width:  200px;
+}
+
+.five{
+    transform: scale(1.5,0.5);          /* 1.5 in x dir and 0.5 in y dirc */
+}
+
+.seven{
+    transform: scaleX(5);          /*  only in x direction */
+}
+
+.nine{
+    transform: scaleY(3);          /*   only in y direction */
+}

@@ -1,0 +1,49 @@
+.container{
+    border:1px solid brown;
+    background-color: yellow;
+    height:700px;
+    width:600px;
+    display:grid;
+    grid-template-columns: 100px 100px 100px;
+    grid-template-rows: 100px 100px;
+/* 
+    grid-gap:10px; */
+/* 
+    justify-content: start;
+    justify-content: end;
+    justify-content: center;                               //it align content in horizontal axis ( main axis) ;
+    justify-content: space-between;
+    justify-content: space-around;
+    justify-content: space-evenly; */
+
+    /* align-items: start;
+    align-items: end;
+    align-items: baseline;                              //it align content in vertical axis (cross axis);
+    align-items: stretch; */
+/* 
+    align-content: space-around; */
+    /* justify-content: center;
+    align-content: center; */
+   
+    /* place-content: center; */
+
+    /* justify-items: center;
+    align-items: center; */
+
+     place-items:center;                             /*  //  place-item   :- placed item , box in center of grid  */
+                                                     /* //  place-content  :- place whole content in center of viewport; */
+
+}
+
+.box{
+    border:1px solid red;
+    background-color: aqua;
+}
+
+#box1{
+    /* justify-self: start;
+    justify-self: end;
+    justify-self: center;                               //justify-self  is used on child means one item , box and justify-content:  is used on parent means on container;
+                                                        //justify work on main axis;  and align work on cross axis;
+    /* align-self:center; */
+}

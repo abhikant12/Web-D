@@ -1,0 +1,37 @@
+div.btn{
+
+    margin: 50px;
+    background-color:  peru;
+    color: rgb(0, 0, 0);
+    font-size: 40px;
+    font-weight: bold;
+    font-style: italic;
+    padding: 50px;
+    width:  200px;
+    
+
+    border-radius: 10px;                     /*due to this box corner get rounded shaped */
+    box-shadow:  gray 10px 10px 5px;          /*  10px shadow in x dirc and 10px in y dirc and other 5 px
+                                                          define blurness of shadow  */
+    transition:  0.8s;                        /*transition time of that shadow */                                          
+
+}
+
+
+          /* both hover and active are pseudo selector */
+
+
+div.btn:hover{                                     /*due to hover when we move cursor on box all propertiese applied*/
+
+     transform:  translate(-10px , -10px);
+     box-shadow: gray 20px 20px 20px;
+     transition: 0.5s;
+
+}
+
+div.btn:active{                          /* due active when user moves their cursor over an element and then click on 
+                                           element then all its properties is applied; */
+    transform: translate(5px,5px);
+    box-shadow: gray 5px 5px 5px;
+    transition: 0.2s;
+}

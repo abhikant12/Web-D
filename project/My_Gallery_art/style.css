@@ -1,0 +1,82 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+.container{
+    height: 100%;
+    max-width:1200px;
+    margin : 0 auto;
+    padding : 20px;
+  }
+
+
+
+h1{
+    text-align: center;
+    font-size:  3rem;
+    margin : 20px 0;
+}
+
+
+.Gallery{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  } 
+
+
+.card{
+    width:32%;                                     /* three image + 1% space b/w image */
+    position:relative;
+    border-radius: 10px;                           /* it curve the corner of image */
+    overflow: hidden;
+    margin-bottom: 20px;
+}
+
+       /*  YAHA TAK IMAGE  ARE  ARRANGED IN ORDER , MEANS IN A ROW THREE  IMAGE ARE ARRANGE WITH SPACE AND PADDING   */
+
+
+.card img{
+    width:100%; 
+    height:100%;                            /*height 100%  then text "image1" goes behind the image because height of image is 100% */
+    filter: grayscale(100%);                       /* It's  make black and white image */
+    box-shadow: 0 0 20px #333;
+    object-fit: cover;                    /*if image is overlap and some part is hidden then it decrease the size of image and make then fit */
+  }  
+
+
+
+.card:hover{                                        /*due to hover when we move cursor on box all propertiese applied*/
+    transform: scale(1.03);
+    transition: 0.5s;
+    filter: drop-shadow(0 0 10px #333);
+} 
+
+.card:hover img {                               /*black and white bhi hat jayega image par se */
+    filter: grayscale(0%);
+  }
+
+  
+  .card figcaption{                          /* NOW to visualize text/caption we have to overlap the text over image so we use absolute position */
+    position: absolute;
+    bottom: 0;                              /* left , bottom = 0 so text is visual in corner */
+    left: 0;
+    padding: 25px;
+    width: 100%;                          /* width and height is  respect to image means caption width is same as image width */
+    height: 20%;
+    font-size: 16px;
+    font-weight: 500;
+    color: #fff;
+    opacity: 0;                           /* *** opacity = 0 means initially text is not visual and when opacity = 1 then text is visual */
+    border-radius: 0 0 10px 10px;
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.5) 0%, rgba(255, 255, 255, 0) 100%);
+    transition: 0.3s;
+  }
+  
+  .card:hover figcaption {                /* So to visualze text when cursor on box  we have to change opacity of text = 1 */  
+    opacity: 1;
+    transform: scale(1.03);
+  }      

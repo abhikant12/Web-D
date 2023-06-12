@@ -1,0 +1,67 @@
+.game{
+
+    margin: 50px;
+    background-color: azure;
+    border: dotted black 2px;
+    height:  500px;
+    width:  500px;
+}
+
+.box{
+    display:  inline-block;
+    height: 50px;
+    width: 50px;
+    border: solid black 1px;
+}
+
+
+
+.player{
+     
+      transform:  translateY(225px);
+      background-color:  blue;
+
+      animation: move 4s infinite linear;
+      animation-play-state:  paused;              /* initially box is paused */
+}
+
+.enemy{
+    margin-left: 100px;
+    background-color:  red;
+
+    animation: bounce;
+    animation-iteration-count: infinite;
+}
+
+
+
+@keyframes bounce {                 /*this is  bounce keyframes so enemy box can bounce in vertical */
+
+      
+    50%{
+        transform:  translateY(450px);
+    }   
+}
+
+.enemy.one{                                 /* it means it applies on class which has both enemy and one */
+    animation-duration:  2s;
+}
+
+.enemy.two{   
+   animation-duration:  3s;
+}
+
+
+
+
+@keyframes move {                /*this is move keyframes so player box can move in horizontal */
+
+    50%{
+        transform:  translateX(450px) translateY(225px);
+    }   
+}
+
+.game:active .player{
+
+     animation-play-state:  running;
+}

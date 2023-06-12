@@ -1,0 +1,35 @@
+
+div{
+    height : 80px;
+    width : 80px;
+    color: cyan;
+    background-color: blue;
+   
+    margin: 20px;
+}
+
+  /*
+ rotate transform means element rotate in x dir or y dir or both x dir and y direction;
+  
+  */
+
+
+.one{
+     transform: rotate(45deg);          /* element rotate in 45deg in x dirc and 45 in y dirc */
+}
+
+ 
+
+.five{
+    transform: rotateX(80deg);         /*only in x direction */
+}
+
+.seven{
+    transform:  rotateY(80deg);          /* only in y direction */
+}
+
+.nine{
+     transform:    rotateZ(45deg);       /* only in z direction */
+}
+
+ 

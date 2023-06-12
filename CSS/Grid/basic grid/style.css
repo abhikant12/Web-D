@@ -1,0 +1,76 @@
+
+.grid{
+    display: grid;
+    grid-template-columns: auto auto auto auto auto auto;            /*You can use the grid-template-columns property to specify the number of columns in your grid layout. here there are 6 row */
+    gap: 10px;                                                       /*you can also specify size of each row , write size in place of auto like   20px 30px 40px 20px */
+    background-color: #2196F3;                                     /*there are column gap and row gap and gap */
+    padding: 10px;
+  }
+  
+  .container > div {
+    background-color: rgba(255, 255, 255, 0.8);
+    text-align: center;
+    padding: 20px 0;
+    font-size: 30px;
+  }
+  
+  .grid> .item1 {                                          /*it means item1 column start at column line 1 and end at column line 5 */
+    grid-column-start: 1;
+    grid-column-end: 5;
+  }
+
+
+
+  .grid1{
+    display: grid;
+    grid-template-columns: 80px 200px auto 30px;                    /*here  grid-template-columns:  specify number of column and size of column similarly   grid-template-rows   property defines the height of each row. */
+    gap: 10px;
+    background-color: #2196F3;
+    padding: 10px;
+  }
+  
+
+  .grid2{
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    grid-gap: 10px;
+    background-color: #2196F3;
+    padding: 10px;
+  }
+
+
+
+ .grid2 > .item1 {
+    grid-area: 2 / 1 / span 2 / span 3;                         /*You can use the grid-area property to specify where to place an item. */
+  }                                                            /*The syntax is grid-row-start / grid-column-start / grid-row-end / grid-column-end.*/
+
+
+
+
+  /*    READ MORE PROPERTY  OF  GRID   IN W3school search   Grid css */ 
+
+/*   
+  display: grid;
+
+  grid-template-rows: repeat(4, 1fr);                          // it create four rows , each row of size 1fr;  here 1fr is  (screen width / 4);
+  grid-template-columns: repeat(3,1fr);                        // Fr is a fractional unit and 1fr is for 1 part of the available space.
+  grid-gap:10px;
+
+#box1{
+  grid-column-start:1;
+  grid-column-end:4 ;
+
+  grid-row-start: 1;
+  grid-row-end: 3; 
+
+  grid-area:1/1/3/4;
+
+
+     grid-auto-rows: minmax(100px , auto);               //it create automatically row if the content increase;
+
+     grid-template-columns: 80px 200px 1fr 30px;         //then here if screen width is 1200px then 1fr is (1200 - 80 - 300 - 200) = 620px;
+
+  
+   
+} 
+*/

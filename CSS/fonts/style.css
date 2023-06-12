@@ -1,0 +1,32 @@
+*{
+    font-size: 30px;
+}
+
+#para1{
+  
+  /*  font-size: 1vh;         1vh is 1/100 of window height */
+      font-size:  60px;
+        
+}
+
+#para2{
+
+    font-family: monospace;              /*monospace means every character of same width; */
+    font-family: serif;              /*serif give edge to the corner of character */
+  /*  font-family: sans-serif;          sans-serif do not give edge to the corner of character */
+}
+
+#para3{
+  
+      font-style: italic;
+      font-weight:  bold;
+    
+}
+
+#para4{
+    
+    word-spacing: 1px;
+    letter-spacing: 4px;
+      
+    
+}

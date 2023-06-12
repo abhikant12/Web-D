@@ -1,0 +1,108 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {                                      /* Set the background color for the HTML document: */
+         background: lightgrey;
+  }
+
+
+.wrapper{
+      max-height: 100vh;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      
+}
+
+.card-box {
+    position: relative;                                          /* it make card box of color white */
+    margin: 10% 20%;
+    max-width: 700px;
+    background-color: white;
+    border-radius: 1.5em;
+    display: inline-flex;                       /* it inline the card-text and image means it place both in one row in card box */
+   
+  } 
+ 
+
+  .mug{                                               /* first we make two div in card-box one is (mug_div) and other is (card-text) */
+    max-width: 100%;                                  /*both div has given 50% of width of card box and then in mug we give 100% of mug_div width to image mug */
+    min-height: 100%;
+    border-radius: 1.5em 0 0 1.5em; 
+  }
+ 
+.mug_div{
+    position: relative; 
+    width : 50%;
+}
+ 
+
+.card-text{
+     position: relative;
+     text-align: left;
+     width: 50%;
+     margin: 20px;       
+}
+
+
+
+.btn{
+    width: 100%;
+    background-color: slategray;
+    border: none;
+    color: white;
+    padding: 16px 32px;
+    text-align: center;
+    font-size: 16px;
+    border-radius: 10px;
+    transition-duration: 0.4s;
+}
+
+
+.btn:hover {
+background-color: hsl(156, 24%, 24%);
+color: white;
+} 
+
+
+
+
+/* FROM HERE TEXT EDITION BEGIN */
+
+
+.coffee_mug{
+    font-family: "Montserrat", sans-serif;
+    color: gray;
+    letter-spacing: 0.3em;
+}
+
+.White_coffee_mug {
+    font-size: 30px;
+    font-weight: 700;
+    font-family :'Times New Roman', Times, serif;
+    line-height: 1;
+  }
+
+ .paragraph{
+    font-family: "Montserrat", sans-serif;
+    color: gray;
+}
+
+.discount{
+    text-decoration: line-through;
+    color: slategray;
+  }
+
+.rate{
+    font-size: 30px;
+    font-weight: bolder;
+    color: slategray;
+}
+
+ 
+
+   

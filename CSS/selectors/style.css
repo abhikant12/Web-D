@@ -1,0 +1,47 @@
+
+ *{                        /* this is universal selector  means apply to full page*/
+
+    font-style: italic;
+}
+
+
+
+div{
+
+     color: blue
+}
+
+p{
+
+    color : red
+
+}
+
+
+.big{
+     font-size: 25px;
+}
+
+.bold{
+
+    font-weight: bold;
+}
+
+#one{
+     background-color: darkorange;
+}
+#two{
+    background-color:  darkorange;
+
+    padding-left:  70px;  
+}
+
+input[disabled]{
+      
+     font-size:  30px;
+}
+
+input[type = "text"]{                /* this is attribute selector ,Selects all elements that have the given attribute.e*/
+
+     height:  40px;
+}

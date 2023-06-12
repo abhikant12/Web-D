@@ -1,0 +1,40 @@
+.container{
+
+     margin: 40px;                                    /*  note there are two axis in flex :- main axis(x-axis) and cross axis (y-axis) */
+    height: 400px;
+    width:  400px;
+    background-color:  bisque;
+    display: flex;                     /* Flexbox is a layout model that allows elements to align and distribute space
+                                        within a container. Using flexible widths and heights, elements can be aligned
+                                         to fill a space or distribute space between elements, which makes it a great 
+                                         tool to use for responsive design systems */
+
+   flex-wrap:  wrap;                        /*sets whether flex items are forced onto one line or can wrap onto multiple lines  is necessary.  type :- wrap,nowrap,wrap-reverse*/
+
+   flex-direction: row;                   /* if flex-dir is column then all element arrange in column wise and also reverse option 
+                                             ex:- row-reverse .. */
+                                  
+   justify-content: center;               /*how item within a row are aligned in order means center -> row are at center. type :- flex-start , flex-end , center*/ 
+                                          /*space-around  , space-evenly , space-between  give space b/w  content  there are also type of justify content; */
+                                
+   align-items:  center;                 /*it aligned item in vertically direction  and center -> content are at center  , to see effect comment align-content   type :- flex-start , flex-end , center*/ 
+                             
+   align-content:  center;             /*how all the row are aligned together  , it has also all type same as justify-content */
+
+   gap: 3px;                           /* it give gap b/w  boxes , similar tag gap , row-gap column-gap */
+}
+
+
+.item{
+
+  border: dotted maroon 2px;
+  margin:  10px;
+    height: 50px;
+    width: 50px;
+    background-color: lightseagreen;
+    font-size: 20pt;
+    color: white;
+
+    text-align:  center;       /* due to this text in box aligned at center horizontally */
+     line-height: 50px;        /* due to this text in box aligned at center perpendicularly */
+} 

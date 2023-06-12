@@ -1,0 +1,124 @@
+.container{                       /* to create larger boc */
+    margin:  30px;
+    width:  400px;
+    height:  400px;
+ background-color:  lightpink;
+  
+}
+
+.item{                                        /* to create smaller box */
+    height: 50px;
+    width:  50px;
+    margin: 20px;
+   background-color: darkcyan;
+   border: solid black 1px;
+   
+    display: inline-block;                 
+    animation: bounce  3s ;
+    animation-iteration-count:  infinite; 
+}
+
+
+@keyframes bounce{
+    0%{                                   /*  at 0% of animation what do you wnat write in the bracket{}  */
+    }
+    50%{                                  /*  at 50% of animation what do you wnat write in the bracket{}  */
+        transform:  translateY(300px);
+    }
+    100%{                                 /*  at 100% of animation what do you wnat write in the bracket{}  */
+    }  
+}
+
+          /*here the time when all box  reach at bottom and up is same */
+.one{
+    animation-timing-function: ease-in;             /* In ease in box start slow and end fast */
+}
+.two{
+    animation-timing-function: ease-out;           /* In ease out box start fast and end slowly */
+}
+.three{
+    animation-timing-function: linear;             /* In linear box move with constant spped */
+}
+
+/*forth box is dafult ease-in-out means start slow and at middle become fast and at end again become slow */
+
+
+
+
+.second{
+    width: 100px;
+    height: 100px;
+    background-color: red;
+    position: relative;
+    animation-name: example;
+    animation-duration: 4s;
+    animation-iteration-count:  10; 
+  }
+  
+  @keyframes example {
+    0%   {background-color:red; left:0px; top:0px;}
+    25%  {background-color:yellow; left:200px; top:0px;}
+    50%  {background-color:blue; left:200px; top:200px;}
+    75%  {background-color:green; left:0px; top:200px;}
+    100% {background-color:red; left:0px; top:0px;}
+  }
+
+
+  .third {
+    width: 100px;
+    height: 100px;
+    background-color: red;
+    position: relative;
+    animation-name: example2;
+    animation-duration: 4s;
+    animation-iteration-count: 10;
+    animation-direction: alternate-reverse;  
+  }
+  
+  @keyframes example2 {
+    0%   {background-color:red; left:0px; top:0px;}
+    25%  {background-color:yellow; left:200px; top:0px;}
+    50%  {background-color:blue; left:200px; top:200px;}
+    75%  {background-color:green; left:0px; top:200px;}
+    100% {background-color:red; left:0px; top:0px;}
+  }
+
+
+
+
+  
+
+/* 
+    format of animation is this :-  animation_name, duration , timing-function ,  delay , iteration-count , direction , fill-mode;  
+
+
+   div {
+    animation-name: example;
+    animation-duration: 5s;
+    animation-timing-function: linear;
+    animation-delay: 2s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+  }
+  The same animation effect as above can be achieved by using the shorthand animation property:
+  div {
+    animation:  example 5s linear 2s infinite alternate;
+  }
+
+ 
+
+ animation-fill-mode	Specifies a style for the element when the animation is not playing (before it starts, after it ends, or both)
+
+
+Run Animation in Reverse Direction or Alternate Cycles
+
+The animation-direction property specifies whether an animation should be played forwards, backwards or in alternate cycles.
+
+The animation-direction property can have the following values:
+
+normal - The animation is played as normal (forwards). This is default
+reverse - The animation is played in reverse direction (backwards)
+alternate - The animation is played forwards first, then backwards
+alternate-reverse - The animation is played backwards first, then forwards 
+
+*/

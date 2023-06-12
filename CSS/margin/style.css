@@ -1,0 +1,45 @@
+.box{
+
+     margin:  20px;
+     padding:  10px;
+     border: solid black 3px;
+}
+
+#div1{
+    background-color: lightgreen;
+}
+
+#div2{
+    background-color: lightsalmon;
+}
+
+#div3{
+    background-color:  lightcyan;
+}
+
+/* here inspect the margin and padding to understand 
+cell padding :- It specifies the space between the border of a table cell and its contents.	
+cell spacing :- It specifies the space between adjacent cells.
+
+ i am attaching two image to  understand cell padding and margin;
+ */
+
+
+ #margin{                      /* margin: 25px 50px;   top and bottom margins are 25px  , right and left margins are 50px */
+    border: 1px solid black;
+    margin: 25px 50px;
+    background-color: lightblue;
+  }
+
+
+  /*  
+  THERE ARE ALSO DIFFERENT TYPE OF SYNTEX TO GIVE MARGIN :-
+
+    margin-left: ;
+    margin-top: ;
+    margin-bottom: ;
+    margin-right: ;
+
+    */
+
+  

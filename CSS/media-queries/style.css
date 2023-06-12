@@ -1,0 +1,23 @@
+.box{
+    height: 100px;
+    width:  100px;
+    margin: 30px;
+
+    background-color:  brown;
+}
+
+@media (max-width: 900px){              /*if width of screen of more than 900px then color of box is brown and when 
+                                           screen width is less than 900 then it color turn into green; */
+  .box{
+    background-color:  green;
+  }
+}
+    
+
+@media (max-width: 600px){              /* if width of screen of more than 600px then color of box is brown or green and
+                                           when screen  width is less than 600 then it color turn into yellow; */
+    .box{
+      background-color:  yellow;
+    }
+  
+  }

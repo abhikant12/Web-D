@@ -1,0 +1,19 @@
+li {
+    font-weight: bold;         /*all thing which is inside li is bold*/
+}
+
+ul > li {                     /*li which is child of ul means li which is inside ul */
+    color: blue;
+}
+
+ol > li {             
+    color: red;
+}
+
+ul li li {                       /*it means li which is Descendant(inside) of li and this li is Descendant(insdie) of ul */
+    font-style: italic;
+}
+
+ol ~ ul {                        /* it means all ul after ol become green color */
+    background-color: green;
+}

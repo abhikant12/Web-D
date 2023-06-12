@@ -1,0 +1,42 @@
+
+
+/*
+  order of precedence :- id > class > element > *    
+  
+*          applies to all
+div , p    applies to that type of element
+.abc        applies to class abc
+#abc        applies to id abc
+
+              */
+
+
+#id1{
+    background-color: rgb(24, 238, 24);
+}
+
+*{
+    background-color:  lightcyan;
+}
+
+div{
+    background-color:  rgb(11, 71, 236);
+}
+
+.cl1{
+    background-color:  rgb(233, 80, 80);
+}
+
+
+
+
+ /*
+
+#id1{
+    background-color: lightsteelblue;         
+}
+                             // if we rewrite the id and class then it overlap the previous one 
+.cl1{
+    background-color:  lightskyblue;
+} 
+*/

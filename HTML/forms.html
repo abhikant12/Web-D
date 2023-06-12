@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <h3>forms are input element which take data from user</h3>
+
+    <input>     if we write only input tag then it create box like this in which we enter date
+
+    <br>
+    
+    <label for = "pass">Password : </label>                         <!--here we use name attribute so we link label with input box-->
+    <input type="password"   name = "pass">                         input tag + type = "password" so we write hidden data in this 
+    <br>
+    <input type="email">
+    <br>
+    <input min=100 max=200 type="number">                           input tag + type = "number"
+    <br>
+    <input type="date">                                              input tag + type = "date"  it called  date picker
+    <br>
+    <input type="color">                                              input tag + type = "color"   it called  color picker
+    <br>
+    <input type="file">                                               input tag + type = "file"   it called  file picker
+    <br>
+    <br>
+
+      <input type = "radio">                                         this is radio, it is used when we have to select one out of many.
+      <br>
+      <input type = "checkbox">                                      this is checkbox, it is used when we have to select multiple out of many.
+      <br>
+      <br>
+        
+    here if we write checkbox with label and id then if we click on letter A or B then also checkbox get seleceted.
+    and if we not write then not get selected on clicking on letter ex:- C and  same for radio.
+
+    <br>
+    <input id="a" type="checkbox">    <label for="a">A</label>
+    <input id="b" type="checkbox">    <label for="b">B</label>
+    <input type="checkbox">C
+    <br>
+     <br>
+     
+      here "name" tag is used and same name is give to x,y,z so work properly means select one out of many.
+      <br>
+    <input name="channel" type="radio">X
+    <input name="channel" type="radio">Y
+    <input name="channel" type="radio">Z
+    <br>
+    <br>
+     
+    Money Heist is written with label and id;
+    <br>
+    <input id="s1" name="show" type="radio">   <label for="s1">Money Heist</label>
+    <input name="show" type="radio">House of Cards
+    <input name="show" type="radio">Narcos
+    <br>
+    <br>  
+
+    <textarea cols="50" rows="4">asdasd</textarea>                 this is text area
+    <br>
+ 
+    this is single select 
+    <br>
+    <select>            
+        <option>apple</option>
+        <option>orange</option>
+        <option>banana</option>
+        <option>gauvava</option>
+        <option>kela</option>
+    </select>
+    <br>
+    <br>
+
+    this is multiple select by using ctrl key  and it is using "multiple" key word.
+    <br>
+    <select multiple>      
+        <option>apple</option>
+        <option>orange</option>
+        <option>banana</option>
+        <option>gauvava</option>
+        <option>kela</option>
+    </select>
+
+
+
+    <h2>Form</h2>   
+
+    <form action="http://google.com/search">
+        <input name = "inbox">
+        <button type="submit">Search</button>
+        <button type="reset">❌</button>
+    </form>
+
+
+    <h1>Welcome to Thor - Love & Thunder</h1>
+
+    <form action="https://www.thecodehelp.in">
+        <label for="username">Username:</label>
+        <input type="text" id="username">
+        <br>
+        <br>
+        <label for="password">Password:</label>
+        <input type="password" id="password">
+        <br>
+        <br>
+        <input type="submit" value="KNow more">
+    </form>
+       
+   
+    
+
+</body>
+</html>

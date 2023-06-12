@@ -1,0 +1,33 @@
+.box{
+    height:  40px;
+    width: 30%;
+    background-color:  orange;
+    padding:  10px;
+    color: darkslategray;
+
+} 
+                 /*this is pseudo element ex:- hover,active.*/
+
+.box:hover{                      /*this only applies if the user moves their pointer/cursor over an element 
+                                  then all its properties is applied; */
+   
+    background-color:  gray;
+    padding:  10px;
+    color: white;
+
+}
+
+.box:active{                       /*this only applies if the user moves their pointer/cursor over an element 
+                                   and then click on element then all its properties is applied; */
+    height:  40px;
+    width: 30%;
+    font-size: 25px;
+  
+}
+
+input:focus {                   /*this only applies if the user focuses the element by clicking or using 
+                                    keyboard controls on input box*/
+
+    font-size: 30px;
+    width: 200px;
+}

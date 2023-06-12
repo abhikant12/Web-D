@@ -1,0 +1,39 @@
+
+div{
+    height : 80px;
+    width : 80px;
+    color: cyan;
+    background-color: blue;
+   
+    margin: 20px;
+}
+
+  /*
+ translate transform means element shift in x dir or y dir or both x dir and y direction;
+  
+  */
+
+
+.one{
+     transform: translate(200px,50px);          /* element shift 200px in x-dirc and 50px in y-dirc */
+}
+
+ 
+
+.five{
+    transform:translateX(300px);          /*only in x direction */
+}
+
+.seven{
+    transform: translateY(60px);          /* only in y direction */
+}
+
+.nine{
+     transform:  translate(100px)   rotate(45deg);     /* move to the right by 100px then rotate */
+}
+
+.ten{
+
+     transform:  rotate(45deg) translate(200px);         /* first rotate by 45deg and also x-axis rotate by 45 deg 
+                                                           then move to 200px in x-axis dirc so this box move at 45 degree*/
+}

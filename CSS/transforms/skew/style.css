@@ -1,0 +1,37 @@
+ 
+div{
+    height : 80px;
+    width : 80px;
+    color: cyan;
+    background-color: blue;
+   
+    margin: 20px;
+}
+
+  /*
+  skew transform :- This transformation is a shear mapping (transvection) that distorts each point within an
+   element by a certain angle in the horizontal and vertical directions. The effect is as if you grabbed each corner
+    of the element and pulled them along a certain angle.
+  
+  */
+
+
+.one{
+     transform: skewX(45deg) skewY(45deg);         /* element skew in 45deg in x dirc and 45 in y dirc */
+}
+
+ 
+
+.five{
+    transform:  skewX(45deg);          /*only in x direction */
+}
+
+.seven{
+    transform:  skewY(45deg);           /* only in y direction */
+}
+
+.ten{
+     transform:    skew(30deg , 30deg);        /* if we skew in 45deg , 45deg then box get vanish */
+}
+
+ 

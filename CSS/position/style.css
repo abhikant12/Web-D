@@ -1,0 +1,94 @@
+.container {                           /* this made big container box */
+    height: auto;
+    width: 400px;
+    margin: 10px;
+    padding: 10px;
+    z-index: 1;
+
+    background-color: linen;
+}
+
+.item {                                   /* this made small item box of color blue */
+    height: 50px;
+    width: 50px;
+    margin: 10px;
+    border: dashed black 2px;
+    z-index: 3;
+
+    background-color: mediumslateblue;
+    color: white;
+    font-size: 20pt;
+}
+
+/* 
+     if you notice that if we scroll down then box(1.2) goes over the box(1.6) and down the box(1.3)
+     means if box(1.2) cross the box(1.3) then box(1.3) is visible and box(1.2) is not visible because box(1.2) is
+      below the box(1.3); in case of box(1.6) , box(1.2) is above the box(1.6) so box(1.6) is not visible
+      this is happened due to z-index , box(1.3) has higher z-index then box(1.2) and box(1.6) has not z-index;
+ */
+
+.one > .three {             /* box(1.3) */
+    position: relative;
+    z-index: 5;
+}
+
+.one > .four {                  /*class four which is child of class one means class four which is inside of
+                                                                        class one i.e box(1.4)*/
+    position: absolute;
+    left: 100px;
+    top: 100px;
+}
+.one > .five {                /* box(1.3) */
+    position: fixed;
+    left: 100px;
+    top: 100px;
+}
+
+.container > .two {                 /* box :- (1.2) , (2.2) , (3.2) , (4.2) */
+    position: sticky;
+    z-index: 2;
+    top: 30px;
+    bottom: 30px;
+}
+
+.item:nth-child(5n) {
+    background-color: brown;
+}
+
+.container:nth-child(2n) {
+    background-color: aqua;
+}
+
+
+/*The position CSS property sets how an element is positioned in a document. The top, right, bottom, and left 
+properties determine the final location of positioned elements.
+
+there are five type of positioned 
+
+1)position: static;  :-The element is positioned according to the normal flow of the document. This is the default value.
+
+
+2)position: relative; :-  An element with position: relative; is positioned relative to its normal position.
+Setting the top, right, bottom, and left properties of a relatively-positioned element will cause it to be adjusted away from its 
+normal position.The element is positioned according to the normal flow of the document. means position of element is change by using left
+and right relative to viewport.  ex :-  left: 100px;     top: 100px;
+
+
+3)position: absolute; :- An element with position: absolute; is positioned relative to the nearest positioned ancestor 
+(instead of positioned relative to the viewport, like fixed).
+However; if an absolute positioned element has no positioned ancestors, it uses the document body, and moves along with page scrolling.
+means we can change postition of box using left and right : 100px;  relative to its ancestor . ex:- box(1.4)  and its ancestor is big box one that is (container one).
+Note: Absolute positioned elements are removed from the normal flow, and can overlap elements. means if we want to overlap two image then
+we use absolute so that one image move according to other image;
+ 
+
+4)position: fixed; :-The element is removed from the normal document flow . it fixed element with respect to window means if 
+we move webpage down then also element is fixed to that position ex:- box(1.5)
+
+5)position: sticky; :- The element is positioned according to the normal flow of the document, and  it behave like
+static but when it voilate rule then it behave like fixed ex:- in above ex rule is   top: 30px;  bottom: 30px;
+means if box goes below 30px then it will fixed at that position like fixed box(1.5) and also if we scroll up
+and web page move up then if box go up above 30px then it will fixed at that position but it will only be
+one container and in other container other element will fixed; 
+
+ */
