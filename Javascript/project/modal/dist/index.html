@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile Share Modal | Abhikant Singh</title>
+    <link rel="shortcut icon" href="./assets/favicon-a9ce31ac.ico" type="image/x-icon">
+    
+ 
+  <link rel="stylesheet" href="./assets/index-fb871018.css">
+</head>
+<body>
+
+    <div class="w-[100vw] h-[100vh] overflow-hidden  bg-black">
+
+          <div class="fixed rounded-[50%] w-[10rem] h-[10rem] cirlce1"></div>
+          <div class="fixed rounded-[50%] w-[10rem] h-[10rem] cirlce2"></div>
+
+          <div class="w-[350px] h-[450px] mx-auto my-[calc(50vh_-_225px)] wrapper  backdrop-blur-lg border-[#ffffff30] border-2 border-solid rounded-xl bg-[#ffffff1a] flex flex-col justify-center items-center text-[#ffffff]">
+              <img class="w-[180px] h-[180px] border-2 border-[#ffffff30] border-solid rounded-[50%] mt-8"  src="./assets/abhi1-eb5bb9b3.jpg" alt="user">
+              <h2 class="text-[2rem] mt-8"> Abhikant Singh</h2>
+              <h3 class="text-[#ffffff85]  text-[1.2rem] mt-5"> competitive Programmer</h3>
+
+              <div class=" flex flex-col lg:flex-row space-y-3 lg:space-y-0 lg:space-x-3 mt-5 mb-12 justify-center items-center">
+                  <button  onclick="openModal()" class="bg-[#ffffff00] text-[#ffffffb9] rounded-[4px] cursor-pointer border-2 border-[#ffffffb9] border-solid py-[4px] px-[10px] hover:bg-[#ffffffb9] hover:text-[#131313]">
+                      <i class="fa-solid fa-share"></i>
+                      share my profile
+                  </button>
+                  <button class="bg-[#ffffff00] text-[#ffffffb9] rounded-[4px] cursor-pointer border-2 border-[#ffffffb9] border-solid py-[4px] px-[10px] hover:bg-[#ffffffb9] hover:text-[#131313]"> Follow me </button>
+              </div>
+
+           
+          </div> 
+
+           <!--Modal Component-->
+          <div class="modal md:w-[500px] py-[20px] px-[25px] bg-[#00000088]  border-2 border-[#ffffff59] border-solid  backdrop-blur-[10px]  text-[white] rounded-[20px] z-10"> 
+            <div class=" border-b-[1px] border-b-[#ffffff88] flex flex-row  justify-between mb-[25px] items-center pb-[12px] text-[30px]  ">
+              <h1 class="font-bold">Share My Profile</h1>
+              <div> <i onclick="closeModal()" class="fa-solid fa-xmark cursor-pointer text-[30px] "></i></div>
+            </div>
+
+              <h3 class="text-[23px] font-bold">Share this via</h3>
+              <div class="mt-[20px] mb-[25px] flex flex-wrap justify-between items-center">
+                <a href="#" class=" w-[30px] h-[30px] p-[27px] flex items-center justify-center  transition-all duration-[0.5s] text-[27px] border-[1px] border-[#1771e6]  hover:bg-[#1771e6] text-[#1771e6] hover:text-[#fff]  rounded-[50%] ">
+                  <i class="fa-brands fa-facebook-f"></i>
+                </a>
+                <a href="#" class=" w-[30px] h-[30px] p-[27px] flex items-center justify-center  transition-all duration-[0.5s] text-[27px] border-[1px] border-[#1c99e6]  hover:bg-[#1c99e6] text-[#1c99e6] hover:text-[#fff]  rounded-[50%] ">
+                  <i class="fa-brands fa-twitter"></i>
+                </a>
+                <a href="#" class=" w-[30px] h-[30px] p-[27px] flex items-center justify-center  transition-all duration-[0.5s] text-[27px] border-[1px] border-[#cb2770]  hover:bg-[#cb2770] text-[#cb2770] hover:text-[#fff]  rounded-[50%] ">
+                  <i class="fa-brands fa-instagram"></i>
+                </a>
+                <a href="#" class=" w-[30px] h-[30px] p-[27px] flex items-center justify-center  transition-all duration-[0.5s] text-[27px] border-[1px] border-[#2fe664]  hover:bg-[#2fe664] text-[#2fe664] hover:text-[#fff]  rounded-[50%] ">
+                  <i class="fa-brands fa-whatsapp"></i>
+                </a>
+                <a href="#" class=" w-[30px] h-[30px] p-[27px] flex items-center justify-center  transition-all duration-[0.5s] text-[27px] border-[1px] border-[#0081c2]  hover:bg-[#0081c2] text-[#0081c2] hover:text-[#fff]  rounded-[50%] ">
+                  <i class="fa-brands fa-telegram"></i>
+                </a>
+              </div>
+          </div>
+
+          <div class="overlay fixed bg-[#5f5f5f83] pointer-events-none ease-in-out duration-[0.5s]  opacity-0 top-0 left-0 right-0 bottom-0 " onclick="closeModal()"></div>
+
+    </div> 
+
+
+     <script src="https://kit.fontawesome.com/58a810656e.js" crossorigin="anonymous"></script>
+     <script src="./script.js"></script>
+
+</body>
+</html>

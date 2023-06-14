@@ -1,0 +1,71 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@layer base {                         /*  it applies on all font of index.html  */
+    html {
+        font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+    }
+  }
+
+.cirlce1{
+    box-shadow: 0 0 50px #d84869;
+    background: linear-gradient(-25deg, #d84869, #f46641);
+    animation: circle1Animate 15s infinite;
+   }
+.cirlce2{
+    box-shadow: 0 0 50px #5648d8;
+    background: linear-gradient(-25deg, #5648d8, #8641f4);
+    animation: circle2Animate 15s infinite;
+   }
+
+@keyframes circle1Animate {
+       0%{
+            left: 22%;
+            top: 4%;
+       }
+        50% {
+        left: 30%;
+        top: 4%;
+        scale: 1.11;
+        }
+        100%{
+            left: 25%;
+            top: 4%;
+       }
+    }
+    @keyframes circle2Animate {
+           0%{
+            bottom: 6%;
+            right: 25%;
+           }
+            50% {
+            bottom: 6%;
+            right: 30%;
+            }
+        100%{
+            bottom: 6%;
+            right: 25%;
+           }
+        }
+
+        .modal {
+          position: fixed;
+          top: 50%;
+          left: 50%;
+          translate: -50% -50%;
+          scale: 0;
+          transition: 0.5s ease-in-out;
+        }
+   
+        .active {
+          scale: 1;
+        }
+          
+        .overlayactive {
+            opacity: 1;
+            pointer-events: initial;
+          } 
+
+ 
