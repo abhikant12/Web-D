@@ -1,0 +1,100 @@
+*,*::before,*::after {
+    box-sizing:border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', 'sans-serif';
+}
+
+.wrapper{
+    width: 100vw;
+    height: 100vh;
+    background-image: url(./assets/gradient-bg.jpg);
+    background-size: cover;
+    background-position: center;
+    display: grid;
+    place-items: center;
+}
+
+.Player-no{
+    color:white;
+    position:absolute;
+    top:3rem;
+    left:50%;
+    transform:translateX(-50%);
+    background-color: rgba(255, 255, 255, 0.15);
+    border-radius: 1rem;
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    padding: 0.5rem 3rem;
+}
+
+.box-container{
+    width:90%;
+    max-width:20rem;
+    background-color: rgba(255, 255, 255, 0.15);
+    border-radius: 1rem;
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    padding: 2rem;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);                              /* divide the width into 3 column with each width of 1fr ( Fractional ratio )  */
+}                                                                       /* total div is 9 so no of row will be 3 automatically created */
+
+.box{
+    position:relative;
+    width:100%;
+    aspect-ratio: 1/1;
+    cursor: pointer;
+    font-size: 3rem;
+    color:white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.box1, .box2, .box4, .box5{
+    border-right:2px solid white;
+    border-bottom:2px solid white;
+}
+
+.box3, .box6{
+    border-bottom: 2px solid white;
+}
+
+.box7, .box8{
+    border-right:2px solid white;
+}
+ 
+.btn{
+    color:white;
+    position: absolute;
+    bottom:3rem;
+    left:50%;
+    transform:translateX(-50%);
+    background-color: rgba(255, 255, 255, 0.15);
+    border-radius: 1rem;
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    padding: 0.5rem 2rem;
+    cursor:pointer;
+}
+
+.win{
+    background-color: rgba(0, 255, 0, 0.3);
+}
+
+ 
+
+
+
+
+
+/*
+
+1) box-sizing:content-box; ->  If you set an element's width to 100 pixels, then the element's content box will be 100 pixels wide and  the width of any 
+border or padding will be added to the final rendered width, making the element wider than 100px.
+ex:- div{ width: 160px; height: 80px;  padding: 20px;  border: 8px solid red; }  tot_width :- 160px + (2 * 20px) + (2 * 8px) = 216px
+
+2)box-sizing:border-box; -> If you set an element's width to 100 pixels, that 100 pixels will remain the same after adding any border or padding , and the 
+content box will shrink to maintain the width.
+ex :- Total width: 160px ,  Content box width: 160px - (2 * 20px) - (2 * 8px) = 104px
+
+
+*/
