@@ -1,0 +1,295 @@
+/*
+
+
+
+**********
+->> useReducer Hook :- The useReducer Hook is similar to the useState Hook. It allows for custom state logic like add, delete, and complete ,
+     The useReducer Hook accepts two arguments. useReducer(<reducer>, <initialState>) , The reducer function contains your custom state logic and
+     the initialStatecan be a simple value but generally will contain an object.The useReducer Hook returns the current state and a dispatch method.
+
+      syntex :-    const [state, dispatch] = useReducer(reducer, initialArg)
+
+      
+// code example 
+
+    import { useReducer } from 'react';
+
+    function reducer(state, action){
+        switch(action.type){
+            case 'incremented_age':{
+            return{
+                name: state.name,
+                age: state.age + 1
+            };
+        }
+
+            case 'changed_name':{
+            return {
+                name: action.nextName,
+                age: state.age
+            };
+         }
+     }
+        throw Error('Unknown action: ' + action.type);                    //you can also write default value;
+}
+
+        const initialState = { name: 'Taylor', age: 42 };                
+
+        export default function Form(){
+
+        const [state, dispatch] = useReducer(reducer, initialState);       // initialise a hook "usereducer"
+
+        function handleButtonClick(){                                //so when click on button then incremented in age;
+            dispatch({ type: 'incremented_age' });
+        }
+
+        function handleInputChange(e){                              //So when we type in input box then this function get 
+            dispatch({                                             // called and then name changed;
+            type: 'changed_name',                                
+            nextName: e.target.value
+            }); 
+        }
+
+        return (
+            <>
+            <input value = {state.name} onChange = {handleInputChange}  />
+            <button onClick = {handleButtonClick}> Increment age  </button>
+            <p>Hello, {state.name}. You are {state.age}.</p>
+            </>
+        );
+        }
+
+    
+    So here we make a reducer function -> reducer(state, action) which contain different type of action , and then we initialise a 
+    hook usereducer -> const [state, dispatch] = useReducer(reducer, initialState); and NOW we will add, delete, and complete in state
+    with the helper of dispatch like -> dispatch({ type: 'incremented_age' }); this function increase the age; 
+    -> dispatch({ type: 'changed_name' ,   nextName: e.target.value });  this function changed the name                                     
+********
+
+
+
+********
+->> useContext Hook  :-   Context is a way to manage state globally. It can be used together with the useState Hook to share state between
+                          deeply nested components more easily than with useState alone.
+
+EX :-  LET  we have many nested components. The component at the top and bottom of the stack need access to the state. To do this without
+       Context, we will need to pass the state as "props" through each nested component. This is called "prop drilling".  Even though 
+       components 2-4 did not need the state, they had to pass the state along so that it could reach component 5.
+
+//CODE WITHOUT USECONTEXT HOOK
+
+        import { useState } from "react";
+
+        function Component1(){
+        const [user, setUser] = useState("Jesse Hall");
+        return (
+            <>
+            <h1>{`Hello ${user}!`}</h1>                             
+            <Component2 user = {user} />               // PASSING THE state(user) as props so component_5 can use;
+            </>
+        );}
+
+        function Component2({ user }){
+        return (
+            <>
+            <h1>Component 2</h1>
+            <Component3 user={user} />                          output :-    Hello Jesse Hall!
+            </>                                                              Component 2
+        );}                                                                  Component 3
+                                                                             Component 4
+        function Component3({ user }) {                                      Component 5
+        return (                                                             Hello Jesse Hall again!
+            <>
+            <h1>Component 3</h1>
+            <Component4 user={user} />
+            </>
+        );}                                                  
+
+        function Component4({ user }) {
+        return (
+            <>
+            <h1>Component 4</h1>
+            <Component5 user={user} />
+            </>
+        );}
+
+        function Component5({ user }) {
+        return (
+            <>
+            <h1>Component 5</h1>
+            <h2>{`Hello ${user} again!`}</h2>
+            </>
+        );}
+
+        
+//CODE WITH USECONTEXT HOOK    
+
+        import { useState, createContext, useContext } from "react";
+
+        const UserContext = createContext();                        //To create context, you must Import createContext and initialize it:
+
+        function Component1() {
+        const [user, setUser] = useState("Jesse Hall");            // using useState we set value in user;
+
+        return (
+            <UserContext.Provider value = {user}>                  //Wrap child components in the Context Provider and supply the state value.
+                <h1>{`Hello ${user}!`}</h1>
+                <Component2 />
+            </UserContext.Provider>
+        );}
+
+        function Component2() {
+        return (
+            <>
+            <h1>Component 2</h1>
+            <Component3 />
+            </>
+        );}
+
+        function Component3() {
+        return (
+            <>
+            <h1>Component 3</h1>
+            <Component4 />
+            </>
+        );}
+
+        function Component4() {
+        return (
+            <>
+            <h1>Component 4</h1>
+            <Component5 />
+            </>
+        );}
+
+        function Component5() {
+        const user = useContext(UserContext);                   //In order to use the Context in a child component, we need to access it 
+                                                               // using the useContext Hook.
+        return (
+            <>
+            <h1>Component 5</h1>
+            <h2>{`Hello ${user} again!`}</h2>
+            </>
+        ); }
+
+********
+
+
+********
+
+->> HOW TO MAKE CUSTOM HOOK 
+
+ This is a custom hook ->               import { useContext } from "react";
+                                        import VideoDispatchContext from "../context/VideoDispatchContext";
+
+                                        function useVideoDispatch(){
+                                            return useContext(VideoDispatchContext)
+                                        }
+                                        export default useVideoDispatch
+
+
+  here we make a custom hook of context api (VideoDispatchContext) now we can use  "const dispatch =  useVideoDispatch()"
+  in place of "const dispatch = useContext(VideoDispatchContext);"  This is know as custom hooks
+  and we can save custom hook in another file like we have save it in file name "hooks"
+
+*********
+
+
+*********
+->> useRef Hook :-  It can be used to store a mutable value that does not cause a re-render when updated means it's value
+does not change when there is something change happen in function due to which functoin re-render; It can be used to
+access a DOM element directly. useRef() only returns one item. It returns an Object called current.
+
+If we tried to count how many times our application renders using the useState Hook, we would be caught in an 
+infinite loop since this Hook itself causes a re-render. To avoid this, we can use the useRef Hook.
+
+ex :- 
+            function App() {
+            const [inputValue, setInputValue] = useState("");
+            const count = useRef(0);                                 //initialising
+
+            useEffect(() => {
+                count.current = count.current + 1;                   
+            });
+
+            return (
+                <>
+                <input type="text" value={inputValue} onChange={(e) => setInputValue(e.target.value)} />
+                <h1>Render Count: {count.current}</h1>          
+                </>                                               //here count give how many time function App render;
+            );}
+       
+        
+**ACCESSING DOM ELEMENTS :- here when we click on Focus Input button then it foucs on input box; we can do many thing
+                            by using useRef such as scrolling b/w images etc;
+
+ex :-                  function App() {
+                        const inputElement = useRef();
+
+                        const focusInput = () => {                                
+                            inputElement.current.focus();
+                        };
+
+                        return (
+                            <>
+                            <input type="text" ref={inputElement} />
+                            <button onClick = {focusInput}> Focus Input </button>
+                            </>
+                        );}
+// NOW if we want to focus on input box when we refresh the pages then we can use "useeffect" hook;
+                         
+**********
+
+
+
+
+**********
+->> useMemo and useCallback :- The useMemo and useCallback Hooks are similar. The main difference is that useMemo returns a memoized value 
+and useCallback returns a memoized function. Think of memoization as caching a value so that it does not need to be recalculated.
+
+ex :- 
+                function Counter(){
+                    
+                    const [number, setNumber] = useState(10);
+                
+                const fibFx = useCallback(function fib(n){  
+                                if(n===1 || n===2){
+                                    return 1
+                                }
+                                return fib(n-1)+fib(n-2)
+                            },[])
+
+                    const fibMemoized = useMemo(() => fibFx(number),[number]) 
+
+                    return(
+                        <>
+                        <h1 style={{color:'white'}}>{number} | {fibMemoized}</h1>
+                        </>
+                    );}
+
+**********                
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+*/

@@ -1,0 +1,110 @@
+/*
+-> we can access any attribute like class , id , function by using curly bracket {}
+ ex :- 
+            function App() {
+
+            let name  = 'react app'
+            let className = 'App-header';
+           
+            return (
+               <>
+                 <div className={className}>
+                     {name}
+                   <Demo></Demo>
+                 </div>
+               <>
+            );
+          }
+
+-> <> This is Known fragment we use it becuase we do'nt to include one more div or parent div; 
+
+**jSX :-  <Component style = {{color:'red' , backgroundColor:'red'}} />  means
+
+**props :- <Component name = "x" age = {42} />     here  name and age are props;  or -->> function Component({props}) and access by props.name;
+         function Component({name , age}){...}   here {name , age} are props or we can use by {props} and access it by props.name and props.age;
+
+
+*********
+children  is used to display whatever you include between the opening and closing tags when invoking/rendering a component:
+ex:- 
+const Picture = (props) => {
+  return (
+    <div>
+      <img src={props.src}/>
+      {props.children}
+    </div>
+  )
+
+//App.js
+render () {
+  return (
+    <div className='container'>
+      <Picture key={picture.id} src={picture.src}>
+                 //what is placed here is passed as props.children  
+      </Picture>
+    </div>
+  )
+}
+
+*********
+
+** Hooks ->  Hooks allow function components to have access to state and other React features such as useState , useEffect , useContext;
+** useState -> The React useState Hook allows us to track state in a function component. State generally refers to data or properties that need to be tracking in an application
+
+To use the useState Hook, we first need to import it into our component. :-  import { useState } from "react";
+ex:-
+          import { useState } from "react";
+
+          function Car() {
+            const [car, setCar] = useState({                           //initial value of car properties;
+              brand: "Ford",
+              model: "Mustang",
+              year: "1964",
+              color: "red"
+            });
+            
+            const updateColor = () => {
+              setCar(previousState => {
+                return { ...previousState , color: "blue" }
+              });
+            }
+
+            return(
+              <>
+                <h1> My {car.brand} </h1>
+                <p> It is a {car.color} {car.model} from {car.year}. </p>
+                <button type="button" onClick = {updateColor}> Blue </button>
+             </>
+            )
+          }
+
+Because we need the current value of state, we pass a function into our setCar function. This function receives the previous value.
+We then return an object, spreading the previousState and overwriting only the color.
+ 
+inital ouput :-    My Ford                                        and when we click            My Ford
+                   It is a red Mustang from 1964                  on Blue botton then          It is a blue Mustang from 1964
+                   Blue  -> this is button                        ouput will    ----->         Blue
+                    
+simpler ex :-
+              function FavoriteColor() {
+                const [color, setColor] = useState("red");
+
+                return (
+                  <>
+                    <h1> My favorite color is {color}!</h1>
+                    <button type = "button"   onClick = {() => setColor("blue")}> Blue </button>                                            
+                  </>
+                )
+              }
+
+initial output :-      My favorite color is red!             when we click                    My favorite color is blue!
+                       Blue  -> this is button               on Blue botton then :-           Blue
+                                                                            
+********
+
+
+         
+*/
+
+
+           

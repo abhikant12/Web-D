@@ -1,0 +1,7 @@
+
+.App{
+  background-color: #333;
+  width:100%;
+  position: absolute;
+  min-height: 100vh;
+}
