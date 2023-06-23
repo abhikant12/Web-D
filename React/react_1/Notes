@@ -103,6 +103,37 @@ initial output :-      My favorite color is red!             when we click      
 ********
 
 
+
+
+*******
+->> map  :-  The map function is a built-in method in JavaScript that allows you to apply a function to every element of an array and returns a 
+             new array with the results.The map function is one of the most useful and commonly used functions in JavaScript because it provides
+             an easy way to transform and manipulate data in an array
+
+const people = [ {name: 'Alice', age: 20} , {name: 'Bob', age: 30} , {name: 'Charlie', age: 40} ]
+const names = people.filter(person => person.age >= 30).map(person => person.name);  
+
+In this example we have an array of people with name and age properties. We use the filter function to create a new array of people
+who are over the age of 30. We then use the function to create a new array of just the names of the those people;
+
+const numbers = [1, 2, 3, 4, 5];
+const doubledNumbers = numbers.map(number => number * 2);
+console.log(doubledNumbers);                                  // (2,4,6,8,10)
+
+
+ here if we put small bracket after arrow (=>) then there is no need of return the value in map like ....
+                                {tours.map( (tour) => (
+                                    <Card key={tour.id} {...tour} removeTour = {removeTour}></Card>
+                                    ))}
+
+here if we put curly bracket after arrow (=>) then we have to  return the value in map like ....
+                               {tours.map( (tour) => {
+                                   return  <Card key={tour.id} {...tour} removeTour = {removeTour}></Card>
+                               })
+// Both work same;
+
+*********
+
          
 */
 
