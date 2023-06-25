@@ -1,0 +1,45 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* css background-image generated using https://10015.io/tools/css-background-pattern-generator */
+.background {
+  background-image: radial-gradient(#ffffff 2.5px, transparent 2.5px), radial-gradient(#ffffff 2.5px, transparent 2.5px);
+  background-size: 36px 36px;
+  background-position: 0 0, 18px 18px;
+  background-color: #b1d2ff;
+  padding-bottom: 100px;
+}
+
+
+
+.custom-loader {                                 /* this is configuration of spinner which is downloaded from  */
+   width: 100px;                                 /*  website :- https://www.cssportal.com/css-loader-generator/ */
+   height: 100px;
+   display: grid;
+   border:8px solid #0000;
+   border-radius: 50%;
+   border-color:#E4E4ED #0000;
+   animation: s6 0.5s infinite linear;
+ }
+ .custom-loader::before,
+ .custom-loader::after {    
+   content:"";
+   grid-area: 1/1;
+   margin:4px;
+   border:inherit;
+   border-radius: 50%;
+ }
+ .custom-loader::before {
+   border-color:#766DF4 #0000;
+   animation:inherit; 
+   animation-duration: 0.25s;
+   animation-direction: reverse;
+ }
+ .custom-loader::after {
+   margin:16px;
+ }
+ 
+ @keyframes s6 { 
+   100%{transform: rotate(1turn)}
+ }
