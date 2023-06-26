@@ -102,10 +102,12 @@ components.
 3) useSearchParams() -> The useSearchParams() hook is a built-in hook in the react-router-dom package that allows you to access and update the search parameters in
  the current URL query string. The hook returns an array with two items:
 
-1.The first item is an instance of the URLsearchParams class that represents the search parameters in the current URL
+ URL :- http//march//abhi?tag = "friend"&&level = "A";
 
-2.The second item is a function that can be used to update the search parameters. When this function is called with a new SearchParama instance or an object of
- key- value pairs, the search parameters in the URL are updated accordingly.
+1.The first item is an object  that represents the search parameters in the current URL , here first item is (tag , level) = (friend , A)
+
+2.The second item is a function that can be used to update the search parameters. When this function is called with a new SearchParama instance 
+or an object of key- value pairs, the search parameters in the URL are updated accordingly.
 
 
 ex :- 
